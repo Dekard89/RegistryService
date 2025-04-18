@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spotify.Identity", "Spotify.Identity\Spotify.Identity.csproj", "{F2FF414F-C5EC-49DF-8890-11BAA7F5434A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identity.Test", "Identity.Test", "{E34C7272-DDCC-429C-B80D-9E06E4CA809A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Test", "Identity.Test\Identity.Test.csproj", "{D5DCF93D-B904-4174-80F9-F63D7CA579C3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F2FF414F-C5EC-49DF-8890-11BAA7F5434A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2FF414F-C5EC-49DF-8890-11BAA7F5434A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2FF414F-C5EC-49DF-8890-11BAA7F5434A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2FF414F-C5EC-49DF-8890-11BAA7F5434A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5DCF93D-B904-4174-80F9-F63D7CA579C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5DCF93D-B904-4174-80F9-F63D7CA579C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5DCF93D-B904-4174-80F9-F63D7CA579C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5DCF93D-B904-4174-80F9-F63D7CA579C3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D5DCF93D-B904-4174-80F9-F63D7CA579C3} = {E34C7272-DDCC-429C-B80D-9E06E4CA809A}
+	EndGlobalSection
+EndGlobal
