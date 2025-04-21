@@ -11,6 +11,7 @@ public class LoginValidator : AbstractValidator<LoginCommand>
     public LoginValidator(UserManager<UserEntity> userManager)
     {
         RuleFor(l => l.Email).NotEmpty().WithMessage("Email is required")
+            .EmailAddress().WithMessage("Email format is required")
             .MustAsync(async (l, token) => await userManager.FindByEmailAsync(l) != null)
             .WithMessage("Email not found");
         RuleFor(l=>l.Password).NotEmpty().WithMessage("Password is require")
@@ -18,9 +19,8 @@ public class LoginValidator : AbstractValidator<LoginCommand>
         RuleFor(l => l).MustAsync(async (login, token) =>
         {
             var user = await userManager.FindByEmailAsync(login.Email);
-            if (user == null)
-                return false;
-            return await userManager.CheckPasswordAsync(user, login.Password);
+            return user!=null
+             && await userManager.CheckPasswordAsync(user, login.Password);
 
         }).WithMessage("Invalid password");
     }
