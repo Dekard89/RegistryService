@@ -18,7 +18,8 @@ public class UpdatePasswordValidator : AbstractValidator<UpdatePasswordCommand>
         RuleFor(u => u).MustAsync(async (command, token) =>
             {
                 var user = await userManager.FindByEmailAsync(command.Email);
-                return await userManager.CheckPasswordAsync(user, command.OldPassword);
+                return user!=null
+                       && await userManager.CheckPasswordAsync(user, command.OldPassword);
             })
             .WithMessage("Invalid password");
         RuleFor(u => u.NewPassword).NotEmpty().WithMessage("new password is required")

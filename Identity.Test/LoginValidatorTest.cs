@@ -70,8 +70,7 @@ public class LoginValidatorTest
         //Assert
         Assert.True(result.IsValid);
     }
-
-    [Fact]
+[Fact]
     public async Task ValidateFail_ThrowExeption()
     {
         //Arange
@@ -87,4 +86,5 @@ public class LoginValidatorTest
         //Act and Assert
         await Assert.ThrowsAsync<ValidationException>(() => validator.ValidateAndThrowAsync(invalidCommand));
     }
+    
 }
